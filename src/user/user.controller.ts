@@ -25,7 +25,6 @@ export class UserController {
 	async getProfile(@CurrentUser('id') id: number) {
 		return this.usersService.byId(id)
 	}
-
 	@UsePipes(new ValidationPipe())
 	@Auth()
 	@HttpCode(200)
@@ -38,9 +37,9 @@ export class UserController {
 	@HttpCode(200)
 	@Patch('profile/favorite/:productId')
 	async toggleFavorite(
-		@Param('productId') productId: string,
 		@CurrentUser('id') id: number,
+		@Param('productId') productId: string,
 	) {
-		return this.usersService.toggleFavorite(id, productId)
+		return this.usersService.toggleFavorite(id, +productId)
 	}
 }

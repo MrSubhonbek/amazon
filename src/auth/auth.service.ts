@@ -11,7 +11,6 @@ import { verify, hash } from 'argon2'
 import { PrismaService } from 'src/prisma.service'
 
 import { AuthDto } from './dto/auth.dto'
-import { RefreshTokenDto } from './dto/refresh-token.dto'
 import { NotFoundException } from '@nestjs/common/exceptions'
 
 @Injectable()
