@@ -1,10 +1,5 @@
 import { faker } from '@faker-js/faker'
-import {
-	BadRequestException,
-	Injectable,
-	NotFoundException,
-} from '@nestjs/common'
-import { Prisma } from '@prisma/client'
+import { Injectable, NotFoundException } from '@nestjs/common'
 import { PrismaService } from 'src/prisma.service'
 import { CategoryDto } from './category.dto'
 import { returnCategoryObject } from './return-category.object'
